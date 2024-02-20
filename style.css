@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box;}
+
+/* Colors */
+:root {
+    --primary: #0e0e20;
+    --secondary: #6a6cb1;
+    --white: #fff;
+    --text: #818181;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+section {
+    min-height: 100vh;
+}
+
+
+.home-section {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(img/hero-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+/* Navbar */
+.home-section .navbar {
+    font-family: 'Inconsolata', sans-serif;
+}
+/* Logo */
+.home-section .navbar-brand {
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+/* Links */
+.home-section .navbar a {
+    color: var(--white);
+}
+.home-section .navbar-brand span { 
+    color: var(--secondary);
+    font-weight: 900;
+}
+.home-section .navbar .nav {
+    margin-left: 23% !important;
+}
+.home-section .navbar .nav a {
+    font-size: 1.1rem;
+}
+.home-section .navbar .nav a:hover,
+.home-section .navbar .nav a.active {
+    text-decoration: underline;
+    color: var(--secondary);
+}
+/* Sign up button */
+.home-section .navbar .sign-up-btn {
+    border: 1px solid var(--secondary);
+    padding: 10px 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: ease .2s;
+    font-size: 1rem;
+}
+.home-section .navbar .sign-up-btn:hover {
+    color: var(--secondary);
+}
+
+/* Hero */
+.home-section .hero {
+    margin: 10% 0;
+}
+.home-section .hero h1 {
+    color: var(--white);
+    font-size: 3.4rem;
+    font-weight: 600;
+}
+.home-section .hero h1 span {
+    color: var(--secondary);
+}
+.home-section .hero p {
+    color: var(--text);
+    width: 60%; 
+    text-align: justify;
+}
+.home-section .hero .buttons {
+    margin: 20px 0;
+}
+.home-section .hero .buttons .h-btn {
+    padding: 13px 35px;
+    border: 1px solid var(--secondary);
+    text-decoration: none;
+    color: var(--white);
+    transition: ease .2s;
+    font-size: 1.03rem;
+    font-weight: 500;
+}
+.home-section .hero .buttons .h-btn:nth-child(1):hover {
+    box-shadow: -3px 3px 17px 1px var(--secondary);
+}
+.home-section .hero .buttons .h-btn:nth-child(2):hover {
+    box-shadow: 3px -3px 17px 1px var(--secondary);
+}
+
+
+
+/* Learn section */
+.learn-section {
+    background: var(--primary);
+}
+.learn-section .row h2 {
+    color: var(--white);
+    font-size: 2.7rem;
+    font-weight: 500;
+}
+.learn-section .row p {
+    color: var(--text);
+    width: 80%;
+    text-align: justify;
+}
+.learn-section .row .more-btn {
+    padding: 12px 25px;
+    background: var(--secondary);
+    color: var(--white);
+    text-decoration: none;
+    transition: ease .2s;
+}
+.learn-section .row .more-btn:hover {
+    box-shadow: 0 0 17px 1px var(--secondary);
+}
+
