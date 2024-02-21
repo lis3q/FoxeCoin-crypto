@@ -6,15 +6,14 @@
 /* Colors */
 :root {
     --primary: #0e0e20;
+    --dark: #0a0a1a;
+    --footer: #06060f;
     --secondary: #6a6cb1;
     --white: #fff;
     --text: #818181;
 }
 body {
     font-family: 'Roboto', sans-serif;
-}
-section {
-    min-height: 100vh;
 }
 
 
@@ -117,14 +116,104 @@ section {
     width: 80%;
     text-align: justify;
 }
-.learn-section .row .more-btn {
+.learn-section .row .more-btn,
+.technology-section .row .more-btn {
     padding: 12px 25px;
     background: var(--secondary);
     color: var(--white);
     text-decoration: none;
     transition: ease .2s;
 }
-.learn-section .row .more-btn:hover {
-    box-shadow: 0 0 17px 1px var(--secondary);
+.learn-section .row .more-btn:hover,
+.technology-section .row .more-btn:hover {
+    box-shadow: 0 0 12px 1px var(--secondary);
 }
 
+/* Technology */ 
+.technology-section {
+    background: var(--dark);
+}
+.technology-section .cards img {
+    height: 240px;
+    width: 240px;
+    margin: 0 auto;
+}
+.technology-section .card {
+    background: var(--primary);
+}
+.technology-section .card-title {
+    color: var(--white);
+}
+.technology-section .card-text {
+    color: var(--text);
+}
+.technology-section .row .card:hover img, 
+.technology-section .row .col-md-4:hover img {
+    animation: cardimg 2s infinite;
+}
+@keyframes cardimg {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+}
+  
+.technology-section .mining-row {
+    background: var(--primary);
+    border-radius: 0.25rem;
+}
+.technology-section .mining-row p {
+    color: var(--text);
+    text-align: justify;
+}
+
+
+/* Team section */
+.team-section {
+    background: var(--primary);
+}
+.team-section .card {
+    background: var(--dark);
+}
+.team-section .card img {
+    width: 210px;
+    height: 200px;
+    object-fit: cover;
+}
+.team-section .card-subtitle {
+    color: var(--secondary);
+}
+.team-section .card-text {
+    color: var(--text);
+}
+.team-section .card-link i {
+    color: var(--white);
+    transition: .2s ease;
+}
+.team-section .card-link i:hover {
+    transform: translateY(-3px);
+}
+
+
+/* Staking section */
+.staking-section {
+    background: var(--dark);
+}
+.staking-section h1 span {
+    color: var(--secondary);
+}
+.staking-section p,
+.staking-section ul li {
+    color: var(--text);
+}
+
+/* Footer */
+footer {
+    background: var(--footer);
+}
+footer a:hover,
+footer .logo {
+    color: var(--secondary) !important;
+}
