@@ -27,6 +27,12 @@ body {
 .home-section .navbar {
     font-family: 'Inconsolata', sans-serif;
 }
+.navbar-toggler {
+    color: transparent !important;
+    border: none !important;
+    outline: none !important;
+    background: var(--secondary);
+}
 /* Logo */
 .home-section .navbar-brand {
     font-size: 1.9rem;
@@ -148,7 +154,7 @@ body {
     color: var(--text);
 }
 .technology-section .row .card:hover img, 
-.technology-section .row .col-md-4:hover img {
+.technology-section .mining-row:hover .col-md-4 {
     animation: cardimg 2s infinite;
 }
 @keyframes cardimg {
@@ -212,8 +218,72 @@ body {
 /* Footer */
 footer {
     background: var(--footer);
+    color: var(--text);
 }
 footer a:hover,
 footer .logo {
     color: var(--secondary) !important;
+}
+
+
+/* Responsivness */
+@media screen and (max-width: 768px) {
+    /* Nav */
+    .nav {
+        justify-content: flex-end !important;
+        text-align: right;
+        background: var(--white);
+        padding: 15px;
+        width: 600px !important;
+    }
+    .nav a {
+        color: var(--dark) !important;
+    }
+    /* Home section */
+    .home-section {
+        height: max-content;
+    }
+    .hero .container h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+    .hero .container p {
+        text-align: justify;
+        width: 100%;
+    }
+    .hero .container .buttons {
+        justify-content: center;
+    }
+    .hero .container .buttons .h-btn {
+        padding: 10px 25px;
+    }
+
+    /* Learn section */
+    .learn-section .h2 {
+        font-size: 1.6rem !important;
+    }
+    .learn-section .row {
+        margin: 50px 0 !important;
+    }
+    .learn-section .row p {
+        width: 100%;
+    }
+    .learn-section .row:nth-child(2) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    /* Technology section */
+    .technology-section .mining-row {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 30px 25px !important;
+    }
+    .technology-section .mining-row img {
+        height: 240px;
+        width: 240px;
+        margin: 0 auto !important;
+        display: block;
+        text-align: center;
+    }
 }
